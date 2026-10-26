@@ -1,0 +1,26 @@
+{
+  "name": "@luliverify/react-native-sdk",
+  "version": "0.1.0-dev.1",
+  "description": "Private LuliVerify React Native SDK foundation",
+  "private": true,
+  "license": "UNLICENSED",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "react-native": "./src/index.ts",
+  "files": ["dist", "src", "README.md", "LICENSE"],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "react-native": "./src/index.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "npm run build && node --test test/*.test.mjs",
+    "example": "npm run build && node example/configuration.mjs"
+  },
+  "devDependencies": { "typescript": "5.9.3" }
+}
